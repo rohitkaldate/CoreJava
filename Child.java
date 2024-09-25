@@ -1,4 +1,5 @@
-//Single Level Inheritance:
+//Single Level Inheritance: Child class extends the properties of parent class
+
 // class Parent
 // {
 //     void adult()
@@ -19,33 +20,66 @@
 //     }
 // }
 
-//Multilevel Inheritance:
 
-class Company
+//Multilevel Inheritance: new class going to extends previous class
+
+// class Company
+// {
+//     void name()
+//     {
+//         System.out.println("Name of company is CISCO ");
+//     }
+// }
+// class Manager extends Company
+// {
+//     void manager()
+//     {
+//         System.out.println("Good boss is better than good company");
+//     }
+// }
+
+// class Child extends Manager{
+//     void employee()
+//     {
+//         System.out.println("I'm employee of the CISCO");
+//     }
+//     public static void main(String args[])
+//     {
+//         Child c=new Child();
+//         c.name();
+//         c.manager();
+//         c.employee();
+//     } 
+// }
+
+
+// Hierarchical Inheritance: Two or more classes extends the same parent class
+
+class Animal
 {
-    void name()
+    void eat()
     {
-        System.out.println("Name of company is CISCO ");
+        System.out.println("Animal is eating");
     }
 }
-class Manager extends Company
-{
-    void manager()
+
+class Dog extends Animal{
+    void bark()
     {
-        System.out.println("Good boss is better than good company");
+        System.out.println("Dog is barking");
     }
 }
 
-class Child extends Manager{
-    void employee()
+class Child extends Animal
+{
+    void cat()
     {
-        System.out.println("I'm employee of the CISCO");
+        System.out.println("Cat is meowing");
     }
     public static void main(String args[])
     {
         Child c=new Child();
-        c.name();
-        c.manager();
-        c.employee();
-    } 
+        c.cat();
+        c.eat();
+    }
 }

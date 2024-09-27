@@ -49,31 +49,61 @@
 
 //Create the interface of bank which is explaining the interest rates of each bank using interface:
 
-interface Bank{
-    float interest();
+// interface Bank{
+//     float interest();
 
-}
+// }
 
-class SBI implements Bank
+// class SBI implements Bank
+// {
+//     public float interest()
+//     {
+//         return 9.56f;
+//     }
+// }
+
+// class Kotak implements Bank{
+//     public float interest()
+//     {
+//         return 8.55f;
+//     }
+// }
+
+// class InterfaceEx
+// {
+//     public static void main(String[] args) {
+//         Bank b=new Kotak();
+//         System.out.println("ROI oof Kotak is: "+b.interest());
+
+//     }
+// }
+
+
+//Multiple inheritance in java using Interface:
+
+interface printable
 {
-    public float interest()
-    {
-        return 9.56f;
-    }
+    void print();
 }
 
-class Kotak implements Bank{
-    public float interest()
-    {
-        return 8.55f;
-    }
-}
-
-class InterfaceEx
+interface showable
 {
+    void show();
+}
+
+class InterfaceEx implements printable,showable
+{
+    @Override
+    public void print() {
+        System.out.println("Printable");
+    }
+    @Override
+    public void show() {
+        System.out.println("Showable");
+    }
     public static void main(String[] args) {
-        Bank b=new Kotak();
-        System.out.println("ROI oof Kotak is: "+b.interest());
-
+        InterfaceEx i=new InterfaceEx();
+        i.print();
+        i.show();
     }
 }

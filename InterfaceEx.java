@@ -19,29 +19,61 @@
 
 //Que: Drawable interface have draw method which is implemented by Rectangle and the Circle(InterfaceEx):
 
-interface Drawable{
-    void draw();
+// interface Drawable{
+//     void draw();
+
+// }
+// class Rectangle implements Drawable //class Rectangle extracting the interface Drawable
+// {
+//     @Override
+//     public void draw() {
+//         System.out.println("Draw the rectangle");
+//     }
+// }
+
+// class Circle implements Drawable    //Class Circle extracting interface
+// {
+//     public void draw()
+//     {
+//         System.out.println("Draw Circle");
+//     }
+// }
+// public class InterfaceEx    //class containing main()
+// {
+//     public static void main(String[] args) {
+//         Drawable d=new Circle();    //Creating obj of interface and calling method
+//         d.draw();
+//     }
+// }
+
+
+//Create the interface of bank which is explaining the interest rates of each bank using interface:
+
+interface Bank{
+    float interest();
 
 }
-class Rectangle implements Drawable //class Rectangle extracting the interface Drawable
-{
-    @Override
-    public void draw() {
-        System.out.println("Draw the rectangle");
-    }
-}
 
-class Circle implements Drawable    //Class Circle extracting interface
+class SBI implements Bank
 {
-    public void draw()
+    public float interest()
     {
-        System.out.println("Draw Circle");
+        return 9.56f;
     }
 }
-public class InterfaceEx    //class containing main()
+
+class Kotak implements Bank{
+    public float interest()
+    {
+        return 8.55f;
+    }
+}
+
+class InterfaceEx
 {
     public static void main(String[] args) {
-        Drawable d=new Circle();    //Creating obj of interface and calling method
-        d.draw();
+        Bank b=new Kotak();
+        System.out.println("ROI oof Kotak is: "+b.interest());
+
     }
 }

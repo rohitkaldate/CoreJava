@@ -21,8 +21,10 @@ class Person{
     }
 }
 
+//Driver class 
 public class Main {
-    public static void main(String args[])
+
+    public static void main(String args[])  //Main method
     {
         Person p=new Person();
         p.setName("Raj");

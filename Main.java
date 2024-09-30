@@ -1,3 +1,5 @@
+//Encapsulation is achieved by making all the data members private
+
 class Person{
     private String name;
     private int age;
